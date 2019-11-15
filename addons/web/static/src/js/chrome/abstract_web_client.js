@@ -100,7 +100,7 @@ var AbstractWebClient = Widget.extend(ServiceProviderMixin, KeyboardNavigationMi
         this._current_state = null;
         this.menu_dm = new concurrency.DropMisordered();
         this.action_mutex = new concurrency.Mutex();
-        this.set('title_part', {"zopenerp": "Odoo"});
+        this.set('title_part', {"zopenerp": "Nirlom ERP"});
     },
     start: function () {
         var self = this;
@@ -252,6 +252,7 @@ var AbstractWebClient = Widget.extend(ServiceProviderMixin, KeyboardNavigationMi
      * Sets the first part of the title of the window, dedicated to the current action.
     */
     set_title: function (title) {
+        console.log(title);
         this.set_title_part("action", title);
     },
     /**
